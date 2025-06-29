@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Drink</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/add-styles.css">
+</head>
+<body>
+    <div>
+        <h1 id="add-title" class="popDown"> Add Drink: </h1>
+        <form action="/add" method="POST" id="add-form" class="popLeft">
+            <input type="text" name="add_drink_name" placeholder="Name of Drink">
+            <input type="text" name="add_drink_brand" placeholder="Brand of Drink">
+            <input type="text" name="add_drink_price" placeholder="Price of Drink">
+            <button type="submit" name="add" value="submit" id="add-button">Add Drink</button>
+            <h2 id="validation_message">
+                {{ validation_message }}
+            </h2>
+        </form>
+        </div>
+    <script src="../static/js/add-validation.js"></script>
+</body>
+</html>

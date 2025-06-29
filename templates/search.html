@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Drink</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/add-styles.css">
+    <link rel="stylesheet" href="../static/css/search-styles.css">
+</head>
+<body>
+<div>
+    <h1 id="search-title-text">Search Drink</h1>
+    <form action="/search" method="POST" id="search_form">
+        <input type="text" name="search_drink_name" placeholder="Search Drink Name" id="search_drink_name">
+        <button type="submit" name="search" value="search-button" id="search-button">Search Drink</button>
+    </form>
+    <br>
+    <div id="table-container">
+        <table>
+            <tr>
+                <th id="th1">Drink ID: </th>
+                <th>Drink Name: </th>
+                <th>Drink Brand: </th>
+                <th>Drink Price: </th>
+            </tr>
+            <tr>
+            {% for drink_detail in drink_data %}
+                <td id="td1">{{ drink_detail[0] }}</td>
+                <td>{{ drink_detail[1] }}</td>
+                <td>{{ drink_detail[2] }}</td>
+                <td>{{ drink_detail[3] }}$</td>
+            {% endfor %}
+            </tr>
+        </table>
+    </div>
+     {% if message %}
+        <p style="color: white; text-align: center">{{ message }}</p>
+    {% endif %}
+</div>
+<script src="../static/js/search-validation.js"></script>
+</body>
+</html>

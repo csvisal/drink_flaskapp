@@ -1,0 +1,53 @@
+/* Table styles */
+table {
+    border-collapse: collapse;
+}
+table th, table td {
+    color: white;
+    font-size: 1.02rem;
+    padding: 10px 20px;
+}
+
+/* h1 : to center Title Style */
+#search-title-text {
+    text-align: center;
+}
+
+/* Search Button Container: */
+#search-button {
+    border: none;
+    border-radius: 8px;
+    background-color: #346277;
+    padding: 11px 30px;
+    cursor: pointer;
+    color: whitesmoke;
+    transition: all 0.15s ease-in-out;
+}
+
+#search-button:hover {
+    transform: scale(1.1) translateY(3px);
+    background-color: #1169c3;
+}
+/* Style the table: */
+#table-container {
+    /*border: 1px solid red;*/
+    margin: 0;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.86);
+    box-shadow: 1px 1px 5px 1px white;
+}
+th {
+    background-color: #1169c3;
+    border-left: 1px solid white;
+}
+td {
+    background-color: whitesmoke;
+    color: black !important;
+    border-left: 1px solid black;
+}
+
+/* NOT IMPORTANT remove border right from th1: */
+#th1,#td1 {
+    border-left: none;
+}
